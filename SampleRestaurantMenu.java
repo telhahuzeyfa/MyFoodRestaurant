@@ -1,5 +1,5 @@
 import java.util.*;
-public class MyFoodRestaurant{
+public class SampleRestaurantMenu{
   public static void main (String[] args){
        foods();
        askForFood();
@@ -12,12 +12,12 @@ public class MyFoodRestaurant{
        paymentMethod();
        creditOrDebit(1987334331);
        textMessage(1987334331);
-       again();
+       repeat();
   }
   public static void foods(){
 
     Scanner scnr = new Scanner (System.in);
-    System.out.println("Welcome to Huzeyfa's food restaurant");
+    System.out.println("Welcome!!!");
     System.out.println("@(^_^)@");
     System.out.println("Can i take your order?");
     System.out.println("Enter 1 and enter to continue");
@@ -35,7 +35,6 @@ public class MyFoodRestaurant{
     System.out.println("3. Burger");
     System.out.println("4. Chipotle");
     System.out.println("5. Beef Steak");
-    System.out.println("6. Shero Wet");
   }
 
   public static void getTheFood(){
@@ -46,34 +45,28 @@ public class MyFoodRestaurant{
     FoodNum = scnr.nextInt();
     
     if (FoodNum == 1){
-    System.out.println("We are preparing your Pizza!!!");
+    System.out.println("We're preparing your Pizza!!!");
     }
 
     if (FoodNum == 2){
-    System.out.println("We are prepareing your Chicken...");
+    System.out.println("We're prepareing your Chicken...");
     System.out.println("-------------------------------------------");
     }
 
     if (FoodNum == 3){
-    System.out.println("We are preparing your Burger...");
+    System.out.println("We're preparing your Burger...");
     System.out.println("-------------------------------------------");
     }
 
     if (FoodNum == 4){
-    System.out.println("We are preparing your Chipotle...");
+    System.out.println("We're preparing your Chipotle...");
     System.out.println("-------------------------------------------");
     }
 
     if (FoodNum == 5){
-    System.out.println("We are preparing your Beef Steak...");
+    System.out.println("We're preparing your Beef Steak...");
     System.out.println("-------------------------------------------");
     }
-
-    if (FoodNum == 6){
-    System.out.println("We are preparing your Shero Wet...");
-    System.out.println("-------------------------------------------");
-    }
-
   }
 
   public static int askIfUserWantDrinks(){
@@ -89,7 +82,8 @@ public class MyFoodRestaurant{
 
     Scanner scnr = new Scanner (System.in);
     int PriceTag;
-    System.out.println("Total: $10 + $5 for delivery");
+   System.out.println("-------------------------------------------");
+   System.out.println("Total: $10 + $5 for delivery");
     System.out.println("$15");
     System.out.println("-------------------------------------------");
   }
@@ -97,7 +91,7 @@ public class MyFoodRestaurant{
   public static void getAddress(){
 
     Scanner scnr = new Scanner (System.in);
-    System.out.println("Enter you address");
+    System.out.println("Enter your address");
     int deliveryOrCarryout = scnr.nextInt();
   }
   
@@ -112,19 +106,19 @@ public class MyFoodRestaurant{
     Payment = scnr.nextInt();
    
     if (Payment == 1){
-      System.out.println("Enter the last 4 digits of your Credit card");
+      System.out.println("Enter the last 4 digits of your credit card");
     }
 
     if (Payment == 2){
-      System.out.println("Enter the last 4 digits of your Debit card");
+      System.out.println("Enter the last 4 digits of your debit card");
     }
 
   }
-  public static void creditOrDebit(int number){
+  public static void creditOrDebit(long number){
     Scanner scnr = new Scanner (System.in);
-    int Number;
+    long Number;
     System.out.println("number");
-    Number = scnr.nextInt();
+    Number = scnr.nextLong();
   }
 
   public static void askForDrink(){
@@ -132,11 +126,11 @@ public class MyFoodRestaurant{
     Scanner scnr = new Scanner (System.in);
     System.out.println("===========================================");
     System.out.println("Any drinks?");
-    System.out.println("0. No Drink");
-    System.out.println("1. Water");
-    System.out.println("2. Soda");
-    System.out.println("3. Strawberry Smoothie");
-    System.out.println("4. Ice Tea");
+    System.out.println("1. No Drink");
+    System.out.println("2. Water");
+    System.out.println("3. Soda");
+    System.out.println("4. Strawberry Smoothie");
+    System.out.println("5. Ice Tea");
    }
 
   public static void getTheDrink(){
@@ -145,36 +139,36 @@ public class MyFoodRestaurant{
     System.out.println("-------------------------------------------");
     DrinkNum = scnr.nextInt();
 
-    if (DrinkNum == 0){
+    if (DrinkNum == 1){
     }
   
-    if (DrinkNum == 1){
+    if (DrinkNum == 2){
     System.out.println("We are preparing your Water!!!");
     }
 
-    if (DrinkNum == 2){
+    if (DrinkNum == 3){
     System.out.println("We are prepareing your Soda...");
     System.out.println("-------------------------------------------");
     }
 
-    if (DrinkNum == 3){
+    if (DrinkNum == 4){
     System.out.println("We are preparing your Strawberry Smoothie...");
     System.out.println("-------------------------------------------");
     }
 
-    if (DrinkNum == 4){
+    if (DrinkNum == 5){
     System.out.println("We are preparing your Ice Tea...");
     System.out.println("-------------------------------------------");
     }
     
    }
 
-    public static void textMessage (int message){
+    public static void textMessage (long message){
       Scanner scnr = new Scanner (System.in);
-      System.out.println("Enter your phone number to get notifications when your order is ready");
-      System.out.println("Without area number");
+      System.out.println("Enter your phone number to get notifications when your order is ready.");
+      System.out.println("Only enter the numbers");
       
-      message = scnr.nextInt();
+      message = scnr.nextLong();
       System.out.println("===========================================");
       
       System.out.println("your order will take approximatly 10 minutes!!!");
@@ -186,7 +180,7 @@ public class MyFoodRestaurant{
       System.out.println("-------------------------------------------");  
     }  
 
-    public static void again(){
+    public static void repeat(){
        foods();
        askForFood();
        getTheFood();
@@ -198,6 +192,6 @@ public class MyFoodRestaurant{
        paymentMethod();
        creditOrDebit(1987334331);
        textMessage(1987334331);
-       again();
+       repeat();
   }
 }
